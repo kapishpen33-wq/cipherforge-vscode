@@ -2,7 +2,7 @@
 
 **Stop copy-pasting your code into ChatGPT. Get the perfect Master Prompt directly inside VS Code.**
 
-PromptMaster Pro is built for developers who want highly optimized, architectural AI prompts without breaking their flow state. No more switching tabs, no more losing context, and no more writing "explain this code to me" over and over.
+PromptMaster Pro is a secure, BYOK AI prompt engineering extension for VS Code that generates context-aware architecture prompts for Claude, ChatGPT, and GitHub Copilot.
 
 Highlight your messy code, right-click, and instantly generate a hyper-structured Master Prompt ready to be fed into any AI agent including GitHub Copilot, Claude, ChatGPT, or Cursor.
 

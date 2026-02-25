@@ -1,15 +1,14 @@
 {
   "name": "promptmaster-pro",
-  "displayName": "PromptMaster Pro",
+  "displayName": "PromptMaster: AI Meta-Prompt",
   "description": "The AI Meta-Agent for high-context prompt engineering",
   "publisher": "kapishp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.109.0"
   },
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Machine Learning", "Other"],
+  "keywords": ["ai", "prompt", "gemini", "chatgpt", "copilot"],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
