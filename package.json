@@ -1,34 +1,67 @@
 {
-  "name": "promptmaster-pro",
-  "displayName": "PromptMaster: AI Meta-Prompt",
-  "description": "The AI Meta-Agent for high-context prompt engineering",
+  "name": "cipherforge",
+  "displayName": "CipherForge: Autonomous Security",
+  "description": "State-of-the-Art Asymmetric Adversarial DevSecOps Engine.",
   "publisher": "kapishp",
-  "version": "0.0.3",
+  "version": "2.0.0",
   "engines": {
     "vscode": "^1.109.0"
   },
-  "categories": ["Machine Learning", "Other"],
-  "keywords": ["ai", "prompt", "gemini", "chatgpt", "copilot"],
+  "categories": [
+    "Machine Learning",
+    "Security"
+  ],
+  "keywords": [
+    "ai",
+    "security",
+    "gemini",
+    "claude",
+    "devsecops",
+    "adversarial"
+  ],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "promptmaster-pro.optimizeCode",
-        "title": "PromptMaster: Generate Master Prompt"
+        "command": "cipherforge.remediate",
+        "title": "CipherForge: Agentic Remediation"
       },
       {
-        "command": "promptmaster-pro.resetApiKey",
-        "title": "PromptMaster: Reset API Key"
+        "command": "cipherforge.resetKeys",
+        "title": "CipherForge: Reset Vault Keys"
       }
     ],
     "menus": {
       "editor/context": [
         {
-          "command": "promptmaster-pro.optimizeCode",
-          "group": "navigation"
+          "command": "cipherforge.remediate",
+          "group": "CipherForge@1"
         }
       ]
+    },
+    "configuration": {
+      "title": "CipherForge Settings",
+      "properties": {
+        "cipherforge.googleModel": {
+          "type": "string",
+          "enum": [
+            "gemini-2.5-flash",
+            "gemini-3.1-pro"
+          ],
+          "default": "gemini-2.5-flash",
+          "description": "Select the Google model to use for the Red Team (Attacker)."
+        },
+        "cipherforge.anthropicModel": {
+          "type": "string",
+          "enum": [
+            "claude-sonnet-4-6",
+            "claude-opus-4-6"
+          ],
+          "default": "claude-sonnet-4-6",
+          "description": "Select the Anthropic model to use for the Blue Team (Defender)."
+        }
+      }
     }
   },
   "scripts": {
@@ -56,6 +89,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "@google/generative-ai": "^0.24.1"
   }
 }
